@@ -16,20 +16,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="inde.js" charset="UTF-8"></script>
+    <script src="index.js" charset="UTF-8"></script>
 </head>
-<style>
-    .carousel:hover{
-        box-shadow: 20px 20px 80px -44px #000000;
-        transition: .5s ease-in-out;
-        cursor: pointer;
-    }
-    .card:hover{
-        box-shadow: 20px 20px 80px -44px #000000;
-        transition: .5s ease-in-out;
-        cursor: pointer;
-    }
-</style>
 <body>
 <nav class="navbar navbar-expand navbar-dark" style="background-color: #769FCD">
     <div class="container-fluid">
@@ -147,8 +135,48 @@
             <br>
             <button type="button" class="btn btn-outline-primary btn-block" onclick="pushUpMessage()"><a href="https://dilnazo4ka.github.io/fixnet_radio/">here</a></button>
             <br>
+            <hr>
             <br>
             <audio id="sound"><source src="ehn.mp3" type="audio/mp3"></audio>
+            <h3>What speed of internet is best for you?</h3>
+            <div class="container-fluid">
+                <form action="action_page.php">
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="fname" >First Name</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="fname" name="firstname" placeholder="Your name.." onkeypress="playMusic()">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="lname">Last Name</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="lname" name="lastname" placeholder="Your last name.." onkeypress="playMusic()">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="country">Speed</label>
+                        </div>
+                        <div class="col-75">
+                            <select id="country" name="country">
+                                <option value="australia">100 mb/s</option>
+                                <option value="canada">200 mb/s</option>
+                                <option value="usa">300 mb/s</option>
+                            </select>
+                        </div>
+                    </div>
+                    <audio id="thank"><source src="thank.mp3" type="audio/mp3"></audio>
+                </form>
+                <div class="row" >
+                    <button class="musicBottom" onclick="showModale()"><a style="color: black">Thank you for submitting</a></button>
+                </div>
+            </div>
+            <br>
+            <br>
             <footer>
                 <p class="float-right"><a href="#">Back to top</a></p>
                 <p>&copy; Netfix Company &middot; <a href="#">fixnet@mail.ru</a> &middot; <a href="#">Terms</a></p>
