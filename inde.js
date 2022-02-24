@@ -6,14 +6,24 @@ document.querySelector('.musicBottom').onmouseover = function (e) {
 };
 
 function pushUpMessage() {
-    document.getElementById('sound').play();
+    if(sound.paused) {
+        document.getElementById('sound').play();
+    }
+    else{
+        document.getElementById('sound').pause();
+    }
 }
-// document.addEventListener('keypress', function(){
-//     pushUpMessage();
-// });
+
 function playMusic(){
-    document.getElementById('thank').play();
+    let name = document.getElementById('fname');
+    while (name > 1 ) {
+        document.getElementById('thank').play();
+    }
 }
-function showModale() {
-    alert("Thank you!")
+function showModale(message) {
+    let user = {
+        firstName: document.getElementById('fname').value,
+        lastName: document.getElementById('lname').value
+    };
+    alert("Dear " + user.firstName + ", we are grateful for your opinion");
 }
